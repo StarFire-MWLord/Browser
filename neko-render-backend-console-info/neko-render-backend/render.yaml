@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: neko-stream-backend
+    runtime: docker
+    plan: standard
+    healthCheckPath: /health
+    envVars:
+      - key: NEKO_MEMBER_MULTIUSER_USER_PASSWORD
+        sync: false
+      - key: NEKO_MEMBER_MULTIUSER_ADMIN_PASSWORD
+        sync: false
+      - key: NEKO_DESKTOP_SCREEN
+        value: 1280x720@30
+      - key: TURN_URLS
+        sync: false
+      - key: TURN_USERNAME
+        sync: false
+      - key: TURN_CREDENTIAL
+        sync: false
